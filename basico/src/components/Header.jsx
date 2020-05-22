@@ -1,7 +1,6 @@
 import React from 'react'
-function Header()
-{
-    // lugar para escribir codigo javascript
+function Header({titulo})
+{   // lugar para escribir codigo javascript
     const edad = 18
     let mensaje 
     if (edad >= 18) {
@@ -10,6 +9,6 @@ function Header()
     else{
         mensaje = 'eres menor de edad'
     }
-return(<h1 className="encabezado"> tienda virtual</h1>)
+return(<h1 className="encabezado">{titulo}</h1>)
 }
 export default Header

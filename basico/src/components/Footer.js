@@ -1,9 +1,10 @@
 import React from 'react'
-function Footer()
-{
-    return(
-        <footer>Todos los derechos reservado a &copy;</footer>
-    )
+const Footer = () => {
+    return ( 
+        <footer>
+            <p>Todos los derechos reservados de Reactkervis &copy </p>
+        </footer>
+     );
 }
-
-export default Footer
+ 
+export default Footer;
