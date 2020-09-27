@@ -1,5 +1,6 @@
 import React, {Fragment, useState}  from 'react';
 import Formulario from './components/Formulario';
+import Cita  from './components/Cita';
 function App() {
 
   // arreglo de citas
@@ -10,9 +11,15 @@ function App() {
   const crearCita = cita =>{
     guardarCitas([...citas,cita])
   }
+
+  // funcion para eliminar cita por su id 
+  const eliminaCita = id =>{
+    const nuevasCitas = citas.filter(cita => cita.id !== id) // crea un nuevo arreglo
+    guardarCitas(nuevasCitas)
+  }
   return (
   <Fragment>
-      <h1>Formulario de contacto</h1>
+      <h1>Formulario de contacto desde casa</h1>
       <div className="container">
           <div className="row">
               <div className="one-half column">
@@ -20,7 +27,18 @@ function App() {
                   crearCita = {crearCita}
                 />
               </div>
-              <div className="one-half column">2</div>
+              <div className="one-half column">
+                 <h2>Administra tus citas </h2>
+                 {citas.map( cita => (
+                   <Cita 
+                      key =  {cita.id}
+                      cita = {cita}
+                      eliminaCita = {eliminaCita}
+                    />
+                 )
+                 )
+                 }
+              </div>
 
 
           </div>

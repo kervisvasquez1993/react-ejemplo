@@ -49,6 +49,18 @@ const [error, actulizarError] = useState(false)
        // CREAR CITA
        crearCita(cita)
 
+      // reiniciar form 
+       actualizarCita({
+        mascota : '',
+        propietario : '',
+        fecha : '',
+        hora : '',
+        sintomas : ''
+       })
+
+       // listad de cita
+
+       
 
       
    }
